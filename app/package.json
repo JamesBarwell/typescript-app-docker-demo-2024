@@ -1,0 +1,46 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "build-watch": "tsc -w --noEmit",
+    "start-prod": "node src/index.js",
+    "start": "tsx --env-file=config.env src/index.ts",
+    "start-dev": "tsx watch --env-file=config.env src/index.ts",
+    "lint": "biome lint .",
+    "lint-fix": "biome lint --write .",
+    "format": "biome format . ",
+    "format-fix": "biome format --write .",
+    "check": "biome check .",
+    "check-fix": "biome check --write .",
+    "test": "mocha --require tsx test/* --fail-zero --timeout 200",
+    "test-watch": "mocha --watch --watch-files src/*,test/* --require tsx test/* --fail-zero --timeout 200",
+    "test-prod": "mocha --require tsx test/* --fail-zero --timeout 200 --forbid-only",
+    "coverage": "c8 --all --src src npm test"
+  },
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "@koa/router": "^12.0.1",
+    "env-var": "^7.5.0",
+    "handlebars": "^4.7.8",
+    "koa": "^2.15.3",
+    "koa-static": "^5.0.0",
+    "koa-views": "^8.1.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@types/koa": "^2.15.0",
+    "@types/koa__router": "^12.0.4",
+    "@types/koa-static": "^4.0.4",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "^22.2.0",
+    "@types/supertest": "^6.0.2",
+    "c8": "^10.1.2",
+    "mocha": "^10.7.3",
+    "supertest": "^7.0.0",
+    "tsx": "^4.17.0",
+    "typescript": "^5.5.3"
+  },
+  "type": "module"
+}

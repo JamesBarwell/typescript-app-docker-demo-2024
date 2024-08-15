@@ -1,0 +1,54 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+  "files": {
+    "ignore": ["coverage/**", "public"]
+  },
+  "organizeImports": { "enabled": true },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space"
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": false,
+      "correctness": {
+        "noUndeclaredVariables": "error",
+        "noUnusedImports": "error",
+        "noUnusedVariables": "off",
+        "useArrayLiterals": "error"
+      },
+      "nursery": {
+        "noDuplicateElseIf": "error",
+        "noDuplicateJsonKeys": "error",
+        "noUndeclaredDependencies": "error",
+        "noUnusedFunctionParameters": "off",
+        "noUselessUndefinedInitialization": "error",
+        "useDefaultSwitchClause": "error",
+        "useErrorMessage": "error",
+        "useThrowOnlyError": "error",
+        "useTopLevelRegex": "error"
+      },
+      "style": {
+        "useFilenamingConvention": {
+          "level": "error",
+          "options": {
+            "strictCase": false,
+            "requireAscii": true,
+            "filenameCases": ["camelCase", "export"]
+          }
+        },
+        "useNodeAssertStrict": "error",
+        "useSingleCaseStatement": "error"
+      },
+      "suspicious": {
+        "noConsoleLog": "error",
+        "noSkippedTests": "error",
+        "useAwait": "error"
+      }
+    }
+  },
+  "javascript": {
+    "globals": ["exports", "cy", "beforeEach", "afterEach", "describe", "it"]
+  }
+}
