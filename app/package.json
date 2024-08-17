@@ -13,9 +13,9 @@
     "format-fix": "biome format --write .",
     "check": "biome check .",
     "check-fix": "biome check --write .",
-    "test": "mocha --require tsx test/* --fail-zero --timeout 200",
-    "test-watch": "mocha --watch --watch-files src/*,test/* --require tsx test/* --fail-zero --timeout 200",
-    "test-prod": "mocha --require tsx test/* --fail-zero --timeout 200 --forbid-only",
+    "test": "mocha --require tsx test/**/* --fail-zero --timeout 200",
+    "test-watch": "mocha --watch --watch-files src/**/*,test/**/* --require tsx test/**/* --fail-zero --timeout 200",
+    "test-prod": "mocha --require tsx test/**/* --fail-zero --timeout 200 --forbid-only",
     "coverage": "c8 --all --src src npm test"
   },
   "license": "ISC",
