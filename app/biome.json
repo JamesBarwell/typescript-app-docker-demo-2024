@@ -49,6 +49,6 @@
     }
   },
   "javascript": {
-    "globals": ["exports", "cy", "beforeEach", "afterEach", "describe", "it"]
+    "globals": ["beforeEach", "afterEach", "describe", "it"]
   }
 }
